@@ -89,9 +89,38 @@ By completing this lab, you'll practice:
 
 ---
 
-## 🏗️ CSS Organization: The BEM Approach
 
-**What is BEM?** BEM (Block, Element, Modifier) is one popular way to organize CSS class names. It's not the only way, but it's helpful for keeping styles organized, especially in team projects.
+## 🏗️ What You'll Build
+
+### **Site Header**
+- Responsive branding section
+- Integrated search form with proper accessibility
+- Clean, professional layout that adapts to screen size
+
+### **Component Documentation Form**
+- Multi-section form with fieldsets and legends
+- All input types: text, select, textarea, radio, checkbox
+- Proper validation states and error handling
+- Responsive layout that works on mobile and desktop
+
+### **Filter Sidebar**
+- Compact filtering interface
+- Different visual treatment from main form
+- Responsive positioning (sidebar on desktop, stacked on mobile)
+
+### **Complete Design System**
+- Consistent color palette and typography
+- Professional spacing and layout
+- Accessible focus states and interactions
+- Polished animations and hover effects
+
+---
+
+## 🏗️ Side Note: The BEM Approach
+
+This project is using the **BEM** (Block, Element, Modifier) approach to organize CSS.
+
+**What is BEM?** BEM is one popular way to organize CSS class names. It's not the only way, but it's helpful for keeping styles organized, especially in team projects.
 
 ### **The BEM Pattern**
 ```css
@@ -112,7 +141,7 @@ By completing this lab, you'll practice:
 - **Easy to find**: Looking for button styles? Check `.component-form__button`
 - **Team-friendly**: Other developers understand the structure
 
-### **How to Apply BEM (If You Want To)**
+### **How to Apply BEM**
 ```html
 <!-- The HTML is already structured this way -->
 <form class="component-form">
@@ -146,32 +175,6 @@ By completing this lab, you'll practice:
 
 ---
 
-## 🏗️ What You'll Build
-
-### **Site Header**
-- Responsive branding section
-- Integrated search form with proper accessibility
-- Clean, professional layout that adapts to screen size
-
-### **Component Documentation Form**
-- Multi-section form with fieldsets and legends
-- All input types: text, select, textarea, radio, checkbox
-- Proper validation states and error handling
-- Responsive layout that works on mobile and desktop
-
-### **Filter Sidebar**
-- Compact filtering interface
-- Different visual treatment from main form
-- Responsive positioning (sidebar on desktop, stacked on mobile)
-
-### **Complete Design System**
-- Consistent color palette and typography
-- Professional spacing and layout
-- Accessible focus states and interactions
-- Polished animations and hover effects
-
----
-
 ## 📝 Your Workflow
 
 ### **Phase 1: Foundation (15-20 minutes)**
@@ -197,75 +200,11 @@ By completing this lab, you'll practice:
 
 ---
 
-## 🎨 Design Principles
-
-### **Professional Quality**
-Your forms should look like they belong in a real design system documentation platform. Think clean, trustworthy, and polished.
-
-### **Accessibility First**
-- All interactive elements have proper focus states
-- Form structure is semantic and screen-reader friendly
-- Color isn't the only way information is conveyed
-- Touch targets are appropriately sized
-
-### **Mobile-First Responsive**
-- Start with mobile layout, then enhance for larger screens
-- Forms stack appropriately on small screens
-- Content remains readable at all sizes
-
-### **BEM Methodology**
-```css
-/* Block */
-.component-form { }
-
-/* Element */
-.component-form__input { }
-
-/* Modifier */  
-.component-form__button--primary { }
-```
-
----
-
-## ✅ Success Criteria
-
-**Visual Polish** ⭐⭐⭐
-- Design feels professional and cohesive
-- Consistent spacing, typography, and colors throughout
-- Forms inspire confidence and trust
-
-**Responsive Design** ⭐⭐⭐
-- Layouts work beautifully on mobile, tablet, and desktop
-- No horizontal scrolling on any screen size
-- Content adapts appropriately to available space
-
-**Code Quality** ⭐⭐⭐
-- SCSS follows BEM naming methodology
-- Code is organized with clear sections and comments
-- Design system tokens used consistently
-
-**User Experience** ⭐⭐⭐
-- Forms are easy to use and understand
-- Clear visual feedback for interactions
-- Accessible to users with different abilities
-
----
-
 ## 🛠️ Available Commands
 
 - `npm run watch` - Auto-compile SCSS as you work (recommended)
 - `npm run build` - Compile once and stop
 - `npm install` - Install the SCSS compiler
-
----
-
-## 💡 Pro Tips
-
-1. **Keep it simple**: Start with basic styling, then add polish
-2. **Mobile first**: Design for mobile, then enhance for desktop
-3. **Consistent spacing**: Use your spacing variables throughout
-4. **Test as you go**: Check your work in the browser frequently
-5. **Real content**: Forms with real labels and content look more professional
 
 ---
 
@@ -275,11 +214,6 @@ Your forms should look like they belong in a real design system documentation pl
 - Make sure `npm run watch` is running
 - Check for syntax errors (missing semicolons, unclosed brackets)
 - Restart the watch command if needed
-
-**Layout not working?**
-- Check your responsive breakpoints
-- Use browser dev tools to inspect your CSS
-- Start simple and add complexity gradually
 
 **Design doesn't look professional?**
 - Focus on consistent spacing first
@@ -295,4 +229,4 @@ Your forms should look like they belong in a real design system documentation pl
 
 ---
 
-**Ready to build something awesome?** Open `scss/main.scss` and follow the guided comments to get started! 🚀
+**Ready to build something awesome?** Open `design-docs/requirements.md` and follow the design to get started! 🚀

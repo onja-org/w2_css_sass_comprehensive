@@ -31,7 +31,7 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Accessibility**: Proper labeling, focus states
 
 **🖼️ Visual Reference:**
-[Screenshot placeholder - you'll add this]
+![Header Screenshot](../assets/sass_comprehensive_header.png)
 
 ---
 
@@ -50,7 +50,8 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Actions**: Primary, secondary, tertiary button styles
 
 **🖼️ Visual Reference:**
-[Screenshot placeholder - you'll add this]
+![Form Screenshot](../assets/sass_comprehensive_main_documentation_wide.png)
+![Form Screenshot Narrow](../assets/sass_comprehensive_main_documentation_narrow.png)
 
 ---
 
@@ -62,7 +63,7 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Content**: Compact filter form with dropdowns and checkboxes
 
 **🖼️ Visual Reference:**
-[Screenshot placeholder - you'll add this]
+![Form Screenshot](../assets/sass_comprehensive_filter_components.png)
 
 ---
 
@@ -188,21 +189,10 @@ Use consistent spacing:
 
 ---
 
-## 🖼️ Visual References
+## 🖼️ Visual Reference
 
-*Note: Screenshots will be added here showing the completed design at different screen sizes and interactive states.*
-
-### Desktop Layout
-[Full desktop screenshot - you'll add this]
-
-### Mobile Layout  
-[Mobile screenshot - you'll add this]
-
-### Component States
-[Focus states, hover effects, error states - you'll add this]
-
-### Interactive Elements
-[Button variations, form interactions - you'll add this]
+### Final Desktop Example
+![Final Desktop Example](../assets/sass_comprehensive_full.png)
 
 ---
 
