@@ -1,330 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design System Documentation Platform</title>
-    <link rel="stylesheet" href="css/complete-styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/complete-styles.css" />
+  </head>
+  <body>
     <!-- Header with search and navigation -->
     <header class="site-header">
-        <div class="site-header__container">
-            <div class="site-header__brand">
-                <h1 class="site-header__title">DesignDocs</h1>
-                <p class="site-header__subtitle">Component Library Platform</p>
-            </div>
-            
-            <!-- Quick Search Form -->
-            <form class="search-form" role="search">
-                <div class="search-form__group">
-                    <label class="search-form__label" for="quick-search">Search components</label>
-                    <div class="search-form__input-wrapper">
-                        <input 
-                            type="search" 
-                            id="quick-search"
-                            class="search-form__input"
-                            placeholder="Search components..."
-                            aria-describedby="search-hint"
-                        >
-                        <button type="submit" class="search-form__button" aria-label="Search">
-                            <span class="search-form__icon">🔍</span>
-                        </button>
-                    </div>
-                    <div id="search-hint" class="search-form__hint">
-                        Press Enter to search all components
-                    </div>
-                </div>
-            </form>
+      <div class="site-header__container">
+        <div class="site-header__brand">
+          <h1 class="site-header__title">DesignDocs</h1>
+          <p class="site-header__subtitle">Component Library Platform</p>
         </div>
+
+        <!-- Quick Search Form -->
+        <form class="search-form" role="search">
+          <div class="search-form__group">
+            <label class="search-form__label" for="quick-search">Search components</label>
+            <div class="search-form__input-wrapper">
+              <input
+                type="search"
+                id="quick-search"
+                class="search-form__input"
+                placeholder="Search components..."
+                aria-describedby="search-hint" />
+              <button type="submit" class="search-form__button" aria-label="Search">
+                <span class="search-form__icon">🔍</span>
+              </button>
+            </div>
+            <div id="search-hint" class="search-form__hint">Press Enter to search all components</div>
+          </div>
+        </form>
+      </div>
     </header>
 
     <!-- Main content area -->
     <main class="main-content">
-        <div class="main-content__container">
-            
-            <!-- Page heading -->
-            <section class="page-intro">
-                <h2 class="page-intro__title">Component Documentation</h2>
-                <p class="page-intro__description">
-                    Use these forms to document and test components in our design system. 
-                    All components should be responsive, accessible, and follow our BEM methodology.
-                </p>
-            </section>
+      <div class="main-content__container">
+        <!-- Page heading -->
+        <section class="page-intro">
+          <h2 class="page-intro__title">Component Documentation</h2>
+          <p class="page-intro__description">
+            Use these forms to document and test components in our design system. All components should be responsive,
+            accessible, and follow our BEM methodology.
+          </p>
+        </section>
 
-            <!-- Component Documentation Form -->
-            <section class="form-section">
-                <h3 class="form-section__title">Add New Component</h3>
-                
-                <form class="component-form" novalidate>
-                    <!-- Basic Information -->
-                    <fieldset class="component-form__fieldset">
-                        <legend class="component-form__legend">Basic Information</legend>
-                        
-                        <div class="component-form__group">
-                            <label class="component-form__label" for="component-name">
-                                Component Name *
-                            </label>
-                            <input 
-                                type="text" 
-                                id="component-name"
-                                class="component-form__input"
-                                required
-                                aria-describedby="name-error name-hint"
-                                placeholder="e.g., Button, Card, Modal"
-                            >
-                            <div id="name-hint" class="component-form__hint">
-                                Use PascalCase for component names
-                            </div>
-                            <div id="name-error" class="component-form__error" aria-live="polite">
-                                <!-- Error messages will appear here -->
-                            </div>
-                        </div>
+        <!-- Component Documentation Form -->
+        <section class="form-section">
+          <h3 class="form-section__title">Add New Component</h3>
 
-                        <div class="component-form__group">
-                            <label class="component-form__label" for="component-category">
-                                Category *
-                            </label>
-                            <select 
-                                id="component-category"
-                                class="component-form__select"
-                                required
-                                aria-describedby="category-hint"
-                            >
-                                <option value="">Select a category</option>
-                                <option value="forms">Forms</option>
-                                <option value="navigation">Navigation</option>
-                                <option value="layout">Layout</option>
-                                <option value="content">Content</option>
-                                <option value="feedback">Feedback</option>
-                            </select>
-                            <div id="category-hint" class="component-form__hint">
-                                Choose the primary category for this component
-                            </div>
-                        </div>
-                    </fieldset>
+          <form class="component-form" novalidate>
+            <!-- Basic Information -->
+            <fieldset class="component-form__fieldset">
+              <legend class="component-form__legend">Basic Information</legend>
 
-                    <!-- Component Details -->
-                    <fieldset class="component-form__fieldset">
-                        <legend class="component-form__legend">Component Details</legend>
-                        
-                        <div class="component-form__group">
-                            <label class="component-form__label" for="component-description">
-                                Description *
-                            </label>
-                            <textarea 
-                                id="component-description"
-                                class="component-form__textarea"
-                                required
-                                rows="4"
-                                aria-describedby="description-hint"
-                                placeholder="Describe what this component does and when to use it..."
-                            ></textarea>
-                            <div id="description-hint" class="component-form__hint">
-                                Include usage guidelines and best practices
-                            </div>
-                        </div>
+              <div class="component-form__group">
+                <label class="component-form__label" for="component-name"> Component Name * </label>
+                <input
+                  type="text"
+                  id="component-name"
+                  class="component-form__input"
+                  required
+                  aria-describedby="name-error name-hint"
+                  placeholder="e.g., Button, Card, Modal" />
+                <div id="name-hint" class="component-form__hint">Use PascalCase for component names</div>
+                <div id="name-error" class="component-form__error" aria-live="polite">
+                  <!-- Error messages will appear here -->
+                </div>
+              </div>
 
-                        <div class="component-form__group">
-                            <label class="component-form__label" for="component-props">
-                                Props/Options
-                            </label>
-                            <textarea 
-                                id="component-props"
-                                class="component-form__textarea"
-                                rows="3"
-                                aria-describedby="props-hint"
-                                placeholder="List the available props or configuration options..."
-                            ></textarea>
-                            <div id="props-hint" class="component-form__hint">
-                                Optional: Document props for developers
-                            </div>
-                        </div>
-                    </fieldset>
+              <div class="component-form__group">
+                <label class="component-form__label" for="component-category"> Category * </label>
+                <select
+                  id="component-category"
+                  class="component-form__select"
+                  required
+                  aria-describedby="category-hint">
+                  <option value="">Select a category</option>
+                  <option value="forms">Forms</option>
+                  <option value="navigation">Navigation</option>
+                  <option value="layout">Layout</option>
+                  <option value="content">Content</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+                <div id="category-hint" class="component-form__hint">
+                  Choose the primary category for this component
+                </div>
+              </div>
+            </fieldset>
 
-                    <!-- Status and Metadata -->
-                    <fieldset class="component-form__fieldset">
-                        <legend class="component-form__legend">Status & Metadata</legend>
-                        
-                        <div class="component-form__group component-form__group--inline">
-                            <span class="component-form__label component-form__label--group">
-                                Development Status *
-                            </span>
-                            <div class="component-form__radio-group" role="radiogroup" aria-required="true">
-                                <div class="component-form__radio-item">
-                                    <input 
-                                        type="radio" 
-                                        id="status-draft"
-                                        name="status"
-                                        value="draft"
-                                        class="component-form__radio"
-                                    >
-                                    <label class="component-form__radio-label" for="status-draft">
-                                        Draft
-                                    </label>
-                                </div>
-                                <div class="component-form__radio-item">
-                                    <input 
-                                        type="radio" 
-                                        id="status-review"
-                                        name="status"
-                                        value="review"
-                                        class="component-form__radio"
-                                    >
-                                    <label class="component-form__radio-label" for="status-review">
-                                        In Review
-                                    </label>
-                                </div>
-                                <div class="component-form__radio-item">
-                                    <input 
-                                        type="radio" 
-                                        id="status-approved"
-                                        name="status"
-                                        value="approved"
-                                        class="component-form__radio"
-                                    >
-                                    <label class="component-form__radio-label" for="status-approved">
-                                        Approved
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Component Details -->
+            <fieldset class="component-form__fieldset">
+              <legend class="component-form__legend">Component Details</legend>
 
-                        <div class="component-form__group component-form__group--inline">
-                            <span class="component-form__label component-form__label--group">
-                                Features
-                            </span>
-                            <div class="component-form__checkbox-group">
-                                <div class="component-form__checkbox-item">
-                                    <input 
-                                        type="checkbox" 
-                                        id="feature-responsive"
-                                        class="component-form__checkbox"
-                                        value="responsive"
-                                    >
-                                    <label class="component-form__checkbox-label" for="feature-responsive">
-                                        Responsive
-                                    </label>
-                                </div>
-                                <div class="component-form__checkbox-item">
-                                    <input 
-                                        type="checkbox" 
-                                        id="feature-accessible"
-                                        class="component-form__checkbox"
-                                        value="accessible"
-                                    >
-                                    <label class="component-form__checkbox-label" for="feature-accessible">
-                                        Accessible
-                                    </label>
-                                </div>
-                                <div class="component-form__checkbox-item">
-                                    <input 
-                                        type="checkbox" 
-                                        id="feature-themeable"
-                                        class="component-form__checkbox"
-                                        value="themeable"
-                                    >
-                                    <label class="component-form__checkbox-label" for="feature-themeable">
-                                        Themeable
-                                    </label>
-                                </div>
-                                <div class="component-form__checkbox-item">
-                                    <input 
-                                        type="checkbox" 
-                                        id="feature-interactive"
-                                        class="component-form__checkbox"
-                                        value="interactive"
-                                    >
-                                    <label class="component-form__checkbox-label" for="feature-interactive">
-                                        Interactive
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
+              <div class="component-form__group">
+                <label class="component-form__label" for="component-description"> Description * </label>
+                <textarea
+                  id="component-description"
+                  class="component-form__textarea"
+                  required
+                  rows="4"
+                  aria-describedby="description-hint"
+                  placeholder="Describe what this component does and when to use it..."></textarea>
+                <div id="description-hint" class="component-form__hint">
+                  Include usage guidelines and best practices
+                </div>
+              </div>
 
-                    <!-- Form Actions -->
-                    <div class="component-form__actions">
-                        <button type="submit" class="component-form__button component-form__button--primary">
-                            Save Component
-                        </button>
-                        <button type="button" class="component-form__button component-form__button--secondary">
-                            Save as Draft
-                        </button>
-                        <button type="reset" class="component-form__button component-form__button--tertiary">
-                            Reset Form
-                        </button>
-                    </div>
-                </form>
-            </section>
+              <div class="component-form__group">
+                <label class="component-form__label" for="component-props"> Props/Options </label>
+                <textarea
+                  id="component-props"
+                  class="component-form__textarea"
+                  rows="3"
+                  aria-describedby="props-hint"
+                  placeholder="List the available props or configuration options..."></textarea>
+                <div id="props-hint" class="component-form__hint">Optional: Document props for developers</div>
+              </div>
+            </fieldset>
 
-            <!-- Quick Filter Form (sidebar-style) -->
-            <aside class="filter-sidebar">
-                <h3 class="filter-sidebar__title">Filter Components</h3>
-                
-                <form class="filter-form">
-                    <div class="filter-form__group">
-                        <label class="filter-form__label" for="filter-category">Category</label>
-                        <select id="filter-category" class="filter-form__select">
-                            <option value="">All Categories</option>
-                            <option value="forms">Forms</option>
-                            <option value="navigation">Navigation</option>
-                            <option value="layout">Layout</option>
-                            <option value="content">Content</option>
-                            <option value="feedback">Feedback</option>
-                        </select>
-                    </div>
+            <!-- Status and Metadata -->
+            <fieldset class="component-form__fieldset">
+              <legend class="component-form__legend">Status & Metadata</legend>
 
-                    <div class="filter-form__group">
-                        <label class="filter-form__label" for="filter-status">Status</label>
-                        <select id="filter-status" class="filter-form__select">
-                            <option value="">All Statuses</option>
-                            <option value="draft">Draft</option>
-                            <option value="review">In Review</option>
-                            <option value="approved">Approved</option>
-                        </select>
-                    </div>
+              <div class="component-form__group component-form__group--inline">
+                <span class="component-form__label component-form__label--group"> Development Status * </span>
+                <div class="component-form__radio-group" role="radiogroup" aria-required="true">
+                  <div class="component-form__radio-item">
+                    <input type="radio" id="status-draft" name="status" value="draft" class="component-form__radio" />
+                    <label class="component-form__radio-label" for="status-draft"> Draft </label>
+                  </div>
+                  <div class="component-form__radio-item">
+                    <input type="radio" id="status-review" name="status" value="review" class="component-form__radio" />
+                    <label class="component-form__radio-label" for="status-review"> In Review </label>
+                  </div>
+                  <div class="component-form__radio-item">
+                    <input
+                      type="radio"
+                      id="status-approved"
+                      name="status"
+                      value="approved"
+                      class="component-form__radio" />
+                    <label class="component-form__radio-label" for="status-approved"> Approved </label>
+                  </div>
+                </div>
+              </div>
 
-                    <div class="filter-form__group">
-                        <span class="filter-form__label">Features</span>
-                        <div class="filter-form__checkbox-group">
-                            <div class="filter-form__checkbox-item">
-                                <input type="checkbox" id="filter-responsive" class="filter-form__checkbox">
-                                <label class="filter-form__checkbox-label" for="filter-responsive">
-                                    Responsive Only
-                                </label>
-                            </div>
-                            <div class="filter-form__checkbox-item">
-                                <input type="checkbox" id="filter-accessible" class="filter-form__checkbox">
-                                <label class="filter-form__checkbox-label" for="filter-accessible">
-                                    Accessible Only
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+              <div class="component-form__group component-form__group--inline">
+                <span class="component-form__label component-form__label--group"> Features </span>
+                <div class="component-form__checkbox-group">
+                  <div class="component-form__checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="feature-responsive"
+                      class="component-form__checkbox"
+                      value="responsive" />
+                    <label class="component-form__checkbox-label" for="feature-responsive"> Responsive </label>
+                  </div>
+                  <div class="component-form__checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="feature-accessible"
+                      class="component-form__checkbox"
+                      value="accessible" />
+                    <label class="component-form__checkbox-label" for="feature-accessible"> Accessible </label>
+                  </div>
+                  <div class="component-form__checkbox-item">
+                    <input type="checkbox" id="feature-themeable" class="component-form__checkbox" value="themeable" />
+                    <label class="component-form__checkbox-label" for="feature-themeable"> Themeable </label>
+                  </div>
+                  <div class="component-form__checkbox-item">
+                    <input
+                      type="checkbox"
+                      id="feature-interactive"
+                      class="component-form__checkbox"
+                      value="interactive" />
+                    <label class="component-form__checkbox-label" for="feature-interactive"> Interactive </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
 
-                    <div class="filter-form__actions">
-                        <button type="submit" class="filter-form__button filter-form__button--primary">
-                            Apply Filters
-                        </button>
-                        <button type="reset" class="filter-form__button filter-form__button--secondary">
-                            Clear All
-                        </button>
-                    </div>
-                </form>
-            </aside>
+            <!-- Form Actions -->
+            <div class="component-form__actions">
+              <button type="submit" class="component-form__button component-form__button--primary">
+                Save Component
+              </button>
+              <button type="button" class="component-form__button component-form__button--secondary">
+                Save as Draft
+              </button>
+              <button type="reset" class="component-form__button component-form__button--tertiary">Reset Form</button>
+            </div>
+          </form>
+        </section>
 
-        </div>
+        <!-- Quick Filter Form (sidebar-style) -->
+        <aside class="filter-sidebar">
+          <h3 class="filter-sidebar__title">Filter Components</h3>
+          <form class="filter-form">
+            <div class="filter-form__group">
+              <label class="filter-form__label" for="filter-category">Category</label>
+              <select id="filter-category" class="filter-form__select">
+                <option value="">All Categories</option>
+                <option value="forms">Forms</option>
+                <option value="navigation">Navigation</option>
+                <option value="layout">Layout</option>
+                <option value="content">Content</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div class="filter-form__group">
+              <label class="filter-form__label" for="filter-status">Status</label>
+              <select id="filter-status" class="filter-form__select">
+                <option value="">All Statuses</option>
+                <option value="draft">Draft</option>
+                <option value="review">In Review</option>
+                <option value="approved">Approved</option>
+              </select>
+            </div>
+
+            <div class="filter-form__group">
+              <span class="filter-form__label">Features</span>
+              <div class="filter-form__checkbox-group">
+                <div class="filter-form__checkbox-item">
+                  <input type="checkbox" id="filter-responsive" class="filter-form__checkbox" />
+                  <label class="filter-form__checkbox-label" for="filter-responsive"> Responsive Only </label>
+                </div>
+                <div class="filter-form__checkbox-item">
+                  <input type="checkbox" id="filter-accessible" class="filter-form__checkbox" />
+                  <label class="filter-form__checkbox-label" for="filter-accessible"> Accessible Only </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-form__actions">
+              <button type="submit" class="filter-form__button filter-form__button--primary">Apply Filters</button>
+              <button type="reset" class="filter-form__button filter-form__button--secondary">Clear All</button>
+            </div>
+          </form>
+        </aside>
+
+        <!-- Finished Component List -->
+        <section class="finished-components">
+          <h3 class="finished-components__title">Finished Component List</h3>
+          <p class="finished-components__description">
+            Here is a list of all components documented in the system. Use the quick search or filters to find specific
+            components. (Note: This is just a placeholder list for demonstration purposes. The filter and search don't
+            work -- just wait until you learn JavaScript to make them functional. It will be fun!)
+          </p>
+          <!-- Placeholder for component list -->
+          <ul class="component-list">
+            <li class="component-list__item">Button</li>
+            <li class="component-list__item">Card</li>
+            <li class="component-list__item">Modal</li>
+            <li class="component-list__item">Tooltip</li>
+            <li class="component-list__item">Dropdown</li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="site-footer__container">
-            <p class="site-footer__text">
-                Design System Documentation Platform &copy; 2024
-            </p>
-        </div>
+      <div class="site-footer__container">
+        <p class="site-footer__text">Design System Documentation Platform &copy; 2024</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

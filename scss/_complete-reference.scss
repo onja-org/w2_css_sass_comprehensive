@@ -17,7 +17,7 @@ $color-background-alt: #f8fafc;
 $color-border: #e2e8f0;
 $color-border-focus: #3b82f6;
 
-$font-family-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 $font-size-sm: 14px;
 $font-size-base: 16px;
 $font-size-lg: 18px;
@@ -65,7 +65,7 @@ $box-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  
+
   &:focus {
     @include focus-style;
   }
@@ -81,17 +81,27 @@ $box-shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-size: $font-size-base;
   line-height: 1.5;
   background-color: $color-background;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
   &:focus {
     outline: none;
     border-color: $color-border-focus;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
   }
-  
+
   &::placeholder {
     color: $color-text-light;
   }
+}
+
+@mixin main-section-title {
+  font-size: $font-size-xl;
+  color: $color-text;
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-sm;
+  border-bottom: 2px solid $color-border;
 }
 
 // Base & Reset
@@ -111,7 +121,12 @@ body {
   background-color: $color-background;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 $spacing-md 0;
   font-weight: 600;
   line-height: 1.3;
@@ -126,7 +141,7 @@ p {
   background-color: $color-background;
   border-bottom: 1px solid $color-border;
   padding: $spacing-md 0;
-  
+
   &__container {
     max-width: 1200px;
     margin: 0 auto;
@@ -134,25 +149,25 @@ p {
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
-    
+
     @include respond-above($breakpoint-md) {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
   }
-  
+
   &__brand {
     flex: 1;
   }
-  
+
   &__title {
     font-size: $font-size-2xl;
     font-weight: 700;
     color: $color-primary;
     margin: 0;
   }
-  
+
   &__subtitle {
     font-size: $font-size-sm;
     color: $color-text-light;
@@ -162,7 +177,7 @@ p {
 
 .main-content {
   min-height: calc(100vh - 200px);
-  
+
   &__container {
     max-width: 1200px;
     margin: 0 auto;
@@ -170,9 +185,9 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: $spacing-xl;
-    
+
     @include respond-above($breakpoint-lg) {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 2fr;
     }
   }
 }
@@ -182,14 +197,14 @@ p {
   border-top: 1px solid $color-border;
   padding: $spacing-lg 0;
   margin-top: $spacing-2xl;
-  
+
   &__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 $spacing-md;
     text-align: center;
   }
-  
+
   &__text {
     color: $color-text-light;
     font-size: $font-size-sm;
@@ -200,45 +215,45 @@ p {
 // Search Form Component
 .search-form {
   flex: 0 0 auto;
-  
+
   &__group {
     display: flex;
     flex-direction: column;
     gap: $spacing-xs;
   }
-  
+
   &__label {
     font-size: $font-size-sm;
     font-weight: 500;
     color: $color-text;
   }
-  
+
   &__input-wrapper {
     display: flex;
     gap: $spacing-xs;
   }
-  
+
   &__input {
     @include input-base;
     flex: 1;
     min-width: 250px;
   }
-  
+
   &__button {
     @include button-base;
     background-color: $color-primary;
     color: white;
     padding: $spacing-sm;
-    
+
     &:hover {
       background-color: darken($color-primary, 5%);
     }
   }
-  
+
   &__icon {
     font-size: $font-size-lg;
   }
-  
+
   &__hint {
     font-size: $font-size-sm;
     color: $color-text-light;
@@ -248,13 +263,13 @@ p {
 // Page Intro
 .page-intro {
   margin-bottom: $spacing-xl;
-  
+
   &__title {
     font-size: $font-size-xl;
     color: $color-text;
     margin-bottom: $spacing-md;
   }
-  
+
   &__description {
     color: $color-text-light;
     font-size: $font-size-base;
@@ -265,11 +280,7 @@ p {
 // Form Section
 .form-section {
   &__title {
-    font-size: $font-size-xl;
-    color: $color-text;
-    margin-bottom: $spacing-lg;
-    padding-bottom: $spacing-sm;
-    border-bottom: 2px solid $color-border;
+    @include main-section-title;
   }
 }
 
@@ -278,7 +289,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: $spacing-xl;
-  
+
   &__fieldset {
     border: 1px solid $color-border;
     border-radius: $border-radius;
@@ -286,20 +297,20 @@ p {
     margin: 0;
     background-color: $color-background-alt;
   }
-  
+
   &__legend {
     font-size: $font-size-lg;
     font-weight: 600;
     color: $color-text;
     padding: 0 $spacing-sm;
   }
-  
+
   &__group {
     display: flex;
     flex-direction: column;
     gap: $spacing-xs;
     margin-bottom: $spacing-lg;
-    
+
     &--inline {
       @include respond-above($breakpoint-md) {
         flex-direction: row;
@@ -307,17 +318,17 @@ p {
         gap: $spacing-lg;
       }
     }
-    
+
     &:last-child {
       margin-bottom: 0;
     }
   }
-  
+
   &__label {
     font-size: $font-size-base;
     font-weight: 500;
     color: $color-text;
-    
+
     &--group {
       @include respond-above($breakpoint-md) {
         flex: 0 0 200px;
@@ -325,68 +336,68 @@ p {
       }
     }
   }
-  
+
   &__input,
   &__select,
   &__textarea {
     @include input-base;
   }
-  
+
   &__textarea {
     resize: vertical;
     min-height: 100px;
   }
-  
+
   &__hint {
     font-size: $font-size-sm;
     color: $color-text-light;
   }
-  
+
   &__error {
     font-size: $font-size-sm;
     color: $color-error;
     font-weight: 500;
   }
-  
+
   // Radio and Checkbox Groups
   &__radio-group,
   &__checkbox-group {
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;
-    
+
     @include respond-above($breakpoint-md) {
       flex: 1;
     }
-    
+
     @include respond-above($breakpoint-md) {
       flex-direction: row;
       flex-wrap: wrap;
       gap: $spacing-md;
     }
   }
-  
+
   &__radio-item,
   &__checkbox-item {
     display: flex;
     align-items: center;
     gap: $spacing-sm;
   }
-  
+
   &__radio,
   &__checkbox {
     width: 18px;
     height: 18px;
     accent-color: $color-primary;
   }
-  
+
   &__radio-label,
   &__checkbox-label {
     font-size: $font-size-base;
     color: $color-text;
     cursor: pointer;
   }
-  
+
   // Form Actions
   &__actions {
     display: flex;
@@ -394,39 +405,39 @@ p {
     gap: $spacing-sm;
     padding-top: $spacing-lg;
     border-top: 1px solid $color-border;
-    
+
     @include respond-above($breakpoint-md) {
       flex-direction: row;
       justify-content: flex-end;
     }
   }
-  
+
   &__button {
     @include button-base;
-    
+
     &--primary {
       background-color: $color-primary;
       color: white;
-      
+
       &:hover {
         background-color: darken($color-primary, 5%);
       }
     }
-    
+
     &--secondary {
       background-color: $color-background;
       color: $color-text;
       border-color: $color-border;
-      
+
       &:hover {
         background-color: $color-background-alt;
       }
     }
-    
+
     &--tertiary {
       background-color: transparent;
       color: $color-text-light;
-      
+
       &:hover {
         color: $color-text;
         background-color: $color-background-alt;
@@ -437,70 +448,66 @@ p {
 
 // Filter Sidebar
 .filter-sidebar {
-  background-color: $color-background-alt;
-  border: 1px solid $color-border;
-  border-radius: $border-radius;
-  padding: $spacing-lg;
-  height: fit-content;
-  
   &__title {
-    font-size: $font-size-lg;
-    font-weight: 600;
+    font-size: $font-size-xl;
     color: $color-text;
-    margin-bottom: $spacing-lg;
-    padding-bottom: $spacing-sm;
-    border-bottom: 1px solid $color-border;
+    margin-bottom: $spacing-md;
   }
 }
 
 // Filter Form
 .filter-form {
+  background-color: $color-background-alt;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  padding: $spacing-lg;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: $spacing-md;
-  
+
   &__group {
     display: flex;
     flex-direction: column;
     gap: $spacing-xs;
   }
-  
+
   &__label {
     font-size: $font-size-sm;
     font-weight: 500;
     color: $color-text;
   }
-  
+
   &__select {
     @include input-base;
     font-size: $font-size-sm;
     padding: $spacing-xs $spacing-sm;
   }
-  
+
   &__checkbox-group {
     display: flex;
     flex-direction: column;
     gap: $spacing-xs;
   }
-  
+
   &__checkbox-item {
     display: flex;
     align-items: center;
     gap: $spacing-xs;
   }
-  
+
   &__checkbox {
     width: 16px;
     height: 16px;
     accent-color: $color-primary;
   }
-  
+
   &__checkbox-label {
     font-size: $font-size-sm;
     color: $color-text;
     cursor: pointer;
   }
-  
+
   &__actions {
     display: flex;
     flex-direction: column;
@@ -508,29 +515,39 @@ p {
     padding-top: $spacing-md;
     border-top: 1px solid $color-border;
   }
-  
+
   &__button {
     @include button-base;
     font-size: $font-size-sm;
     padding: $spacing-xs $spacing-sm;
-    
+
     &--primary {
       background-color: $color-primary;
       color: white;
-      
+
       &:hover {
         background-color: darken($color-primary, 5%);
       }
     }
-    
+
     &--secondary {
       background-color: $color-background;
       color: $color-text;
       border-color: $color-border;
-      
+
       &:hover {
         background-color: $color-background-alt;
       }
     }
+  }
+}
+
+.finished-components {
+  &__title {
+    @include main-section-title;
+  }
+  &__description {
+    color: $color-text-light;
+    font-size: $font-size-base;
   }
 }

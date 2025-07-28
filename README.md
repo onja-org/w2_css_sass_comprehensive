@@ -1,7 +1,7 @@
 # 🎨 Design System Documentation Platform
 ## Comprehensive SCSS Lab
 
-**🎯 Goal:** Build professional form components using SCSS organization, BEM methodology, and responsive design  
+**🎯 Goal:** Build professional form components using SCSS organization, responsive design, and BEM methodology (you'll learn what this is)
 **⏱️ Duration:** 1.5 - 2 hours  
 **📚 What you know:** SCSS basics (variables, nesting, mixins), CSS fundamentals, HTML semantics
 
@@ -13,10 +13,7 @@ You're a front-end developer at **DesignDocs**, a startup that helps design team
 
 **Your task:** Transform the unstyled HTML form components into a polished, responsive design system that other developers will use as a reference.
 
-### Why This Matters
-- **Real-world relevance**: Form components are everywhere in web development
-- **Professional skills**: BEM methodology and SCSS organization are industry standards
-- **Portfolio quality**: This is the kind of work that demonstrates professional competency
+![Finished Lab Screenshot](assets/sass_comprehensive_full.png)
 
 ---
 
@@ -147,12 +144,6 @@ By completing this lab, you'll practice:
 }
 ```
 
-### **Don't Stress About It!**
-- **Focus on making it work first**, then worry about organization
-- **Your own naming system is fine** if it makes sense to you
-- **BEM is just one approach** - there are other ways to organize CSS
-- **The important thing is consistency** within your own project
-
 ---
 
 ## 🏗️ What You'll Build
@@ -275,22 +266,6 @@ Your forms should look like they belong in a real design system documentation pl
 3. **Consistent spacing**: Use your spacing variables throughout
 4. **Test as you go**: Check your work in the browser frequently
 5. **Real content**: Forms with real labels and content look more professional
-
----
-
-## 🎉 When You're Done
-
-**Share your work!** This is portfolio-quality work that demonstrates:
-- Professional SCSS organization
-- Responsive design skills
-- Component-based thinking
-- Attention to accessibility and user experience
-
-**Next steps:** Consider how these patterns would apply to:
-- React or Vue component libraries
-- Design system documentation
-- Client project work
-- Your personal portfolio site
 
 ---
 
