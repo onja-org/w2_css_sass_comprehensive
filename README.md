@@ -204,6 +204,7 @@ This project is using the **BEM** (Block, Element, Modifier) approach to organiz
 
 - `npm run watch` - Auto-compile SCSS as you work (recommended)
 - `npm run build` - Compile once and stop
+- `npm run test-progress` - Check your styling progress with automated tests
 - `npm install` - Install the SCSS compiler
 
 ---
@@ -226,6 +227,11 @@ This project is using the **BEM** (Block, Element, Modifier) approach to organiz
 - **Try your own approach first!** The learning happens in the struggle
 - Only peek at the reference if you're completely blocked
 - Use it to understand patterns, not to copy code directly
+
+**Want to check your progress?**
+- Run `npm run test-progress` to see which sections are complete
+- Tests check for custom styling presence, not specific design choices
+- Great way to track your progress and celebrate wins!
 
 ---
 

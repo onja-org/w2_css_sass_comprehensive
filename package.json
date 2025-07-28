@@ -5,10 +5,20 @@
   "scripts": {
     "build": "sass scss/main.scss css/styles.css --no-source-map",
     "watch": "sass scss/main.scss css/styles.css --watch --no-source-map",
-    "dev": "npm run watch"
+    "dev": "npm run watch",
+    "test-progress": "node tests/progress.js"
   },
-  "keywords": ["scss", "forms", "components", "responsive", "bem"],
+  "keywords": [
+    "scss",
+    "forms",
+    "components",
+    "responsive",
+    "bem"
+  ],
   "devDependencies": {
     "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "puppeteer": "^24.15.0"
   }
 }
