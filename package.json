@@ -1,0 +1,14 @@
+{
+  "name": "design-system-forms",
+  "version": "1.0.0",
+  "description": "Design System Documentation Platform - Form Components Lab",
+  "scripts": {
+    "build": "sass scss/main.scss css/styles.css --no-source-map",
+    "watch": "sass scss/main.scss css/styles.css --watch --no-source-map",
+    "dev": "npm run watch"
+  },
+  "keywords": ["scss", "forms", "components", "responsive", "bem"],
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

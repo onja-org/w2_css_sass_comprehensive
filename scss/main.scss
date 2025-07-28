@@ -1,0 +1,258 @@
+// =============================================================================
+// DESIGN SYSTEM DOCUMENTATION PLATFORM - MAIN SCSS FILE
+// =============================================================================
+//
+// Welcome! You're building form components for a design system documentation
+// platform. This SCSS file is organized using BEM methodology and follows
+// professional patterns you'll see in real projects.
+//
+// LEARNING GOALS:
+// • Practice component-based thinking with BEM + SCSS
+// • Build responsive forms that work on all devices
+// • Create accessible, semantic form components
+// • Organize code using professional SCSS patterns
+//
+// BEFORE YOU START:
+// 1. Run `npm install` to set up the build system
+// 2. Run `npm run watch` to auto-compile as you work
+// 3. After compiling, uncomment the CSS link in index.html
+// 4. Check design-docs/requirements.md for component specifications
+//
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// VARIABLES & CONFIGURATION
+// -----------------------------------------------------------------------------
+// Start by defining your design tokens - colors, spacing, typography.
+// These values should be used throughout your components for consistency.
+
+// TODO: Define color palette
+// Hint: You'll need primary colors, neutral grays, and semantic colors (error, success)
+// Example structure:
+// $color-primary: #your-choice;
+// $color-secondary: #your-choice;
+// $color-text: #your-choice;
+// $color-background: #your-choice;
+// $color-border: #your-choice;
+// $color-error: #your-choice;
+
+// TODO: Define typography scale
+// Hint: Font families, sizes, line heights, and weights
+// Example structure:
+// $font-family-primary: 'Your choice', sans-serif;
+// $font-size-small: 14px;
+// $font-size-base: 16px;
+// $font-size-large: 18px;
+
+// TODO: Define spacing scale
+// Hint: Use consistent spacing values throughout your design
+// Example structure:
+// $spacing-xs: 4px;
+// $spacing-sm: 8px;
+// $spacing-md: 16px;
+// $spacing-lg: 24px;
+// $spacing-xl: 32px;
+
+// TODO: Define breakpoints for responsive design
+// Hint: Mobile-first approach - define minimum widths
+// Example structure:
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 992px;
+
+// -----------------------------------------------------------------------------
+// MIXINS & UTILITIES
+// -----------------------------------------------------------------------------
+// Create reusable patterns that you'll use across multiple components
+
+// TODO: Create a mixin for focus styles
+// Hint: Consistent focus styling for accessibility across all interactive elements
+// Should handle keyboard focus, outline, and any visual feedback
+
+// TODO: Create a mixin for responsive breakpoints
+// Hint: Makes it easier to write mobile-first responsive CSS
+// Consider: @mixin respond-above($breakpoint) { ... }
+
+// TODO: Create a mixin for button base styles
+// Hint: Shared styles that all buttons should have (transitions, cursor, etc.)
+
+// TODO: Create a mixin for form input base styles
+// Hint: Shared styles for inputs, selects, textareas
+
+// -----------------------------------------------------------------------------
+// BASE & RESET
+// -----------------------------------------------------------------------------
+// Foundation styles that apply to the entire page
+
+// TODO: Add CSS reset or normalize
+// Hint: Reset margins, paddings, box-sizing for consistent cross-browser behavior
+
+// TODO: Set base typography
+// Hint: Apply your font family, base font size, line height to body
+
+// TODO: Set base colors
+// Hint: Text color, background color for the entire page
+
+// -----------------------------------------------------------------------------
+// LAYOUT COMPONENTS
+// -----------------------------------------------------------------------------
+// Structural components that organize page content
+
+// TODO: Style .site-header
+// Component: Site header with branding and search
+// BEM structure: .site-header, .site-header__container, .site-header__brand, etc.
+// Requirements:
+// • Responsive layout (mobile: stacked, desktop: horizontal)
+// • Brand section with title and subtitle
+// • Contains the search form
+// • Proper spacing and alignment
+
+// TODO: Style .main-content
+// Component: Main content wrapper
+// BEM structure: .main-content, .main-content__container
+// Requirements:
+// • Responsive container with max-width
+// • Proper spacing from header and footer
+// • Grid layout to accommodate main content and sidebar
+
+// TODO: Style .site-footer
+// Component: Site footer
+// BEM structure: .site-footer, .site-footer__container, .site-footer__text
+// Requirements:
+// • Simple footer with copyright
+// • Consistent spacing and typography
+
+// -----------------------------------------------------------------------------
+// FORM COMPONENTS
+// -----------------------------------------------------------------------------
+// The main focus: building accessible, responsive form components
+
+// TODO: Style .search-form (Header search)
+// Component: Quick search in header
+// BEM structure: .search-form, .search-form__group, .search-form__input, etc.
+// Requirements:
+// • Inline layout (label, input, button in a row)
+// • Responsive behavior (may stack on very small screens)
+// • Search icon in button
+// • Proper focus states and accessibility
+// • Hint text below input
+
+// TODO: Style .page-intro
+// Component: Page introduction section
+// BEM structure: .page-intro, .page-intro__title, .page-intro__description
+// Requirements:
+// • Clear typography hierarchy
+// • Proper spacing below for form content
+
+// TODO: Style .form-section
+// Component: Main form container
+// BEM structure: .form-section, .form-section__title
+// Requirements:
+// • Section title
+// • Proper spacing around contained form
+
+// TODO: Style .component-form (Main documentation form)
+// Component: Complex multi-fieldset form
+// BEM structure: .component-form, .component-form__fieldset, .component-form__group, etc.
+// Requirements:
+// • Fieldsets with legends (proper semantic grouping)
+// • Form groups with labels, inputs, hints, and error messages
+// • Multiple input types: text, select, textarea, radio, checkbox
+// • Responsive layout (single column on mobile, may have some inline groups on desktop)
+// • Proper spacing between groups and sections
+// • Clear visual hierarchy
+
+// TODO: Style form inputs (.component-form__input, .component-form__select, .component-form__textarea)
+// Requirements:
+// • Consistent styling across all input types
+// • Proper padding, borders, colors
+// • Focus states for accessibility
+// • Error states (red border, etc.)
+// • Placeholder styling
+
+// TODO: Style form labels (.component-form__label)
+// Requirements:
+// • Clear, readable typography
+// • Proper spacing from inputs
+// • Required field indicators (*)
+
+// TODO: Style radio and checkbox groups (.component-form__radio-group, .component-form__checkbox-group)
+// Requirements:
+// • Custom styled radio buttons and checkboxes (optional: you may keep browser defaults)
+// • Proper spacing between options
+// • Clear hover and focus states
+// • Accessible click targets
+
+// TODO: Style form hints and errors (.component-form__hint, .component-form__error)
+// Requirements:
+// • Smaller text size
+// • Appropriate colors (subtle for hints, error color for errors)
+// • Proper spacing from inputs
+
+// TODO: Style form buttons (.component-form__button with variants)
+// Requirements:
+// • Primary, secondary, and tertiary button styles
+// • Consistent sizing and spacing
+// • Hover and focus states
+// • May be inline on desktop, stacked on mobile
+
+// TODO: Style .filter-sidebar
+// Component: Sidebar filter form
+// BEM structure: .filter-sidebar, .filter-sidebar__title
+// Requirements:
+// • Sidebar positioning (desktop: side-by-side with main content, mobile: below main content)
+// • Different visual styling from main form (maybe a background color, border, etc.)
+
+// TODO: Style .filter-form (Sidebar filter form)
+// Component: Compact filtering form
+// BEM structure: .filter-form, .filter-form__group, .filter-form__select, etc.
+// Requirements:
+// • More compact spacing than main form
+// • Simple layout optimized for filtering
+// • Consistent with main form patterns but visually distinct
+
+// -----------------------------------------------------------------------------
+// RESPONSIVE DESIGN
+// -----------------------------------------------------------------------------
+// Make sure all components work well on mobile, tablet, and desktop
+
+// TODO: Add responsive breakpoints throughout your components
+// Key considerations:
+// • Header: Stack brand and search on mobile
+// • Main layout: Sidebar below content on mobile, beside content on desktop
+// • Forms: Single column on mobile, may have inline groups on desktop
+// • Buttons: May stack on mobile, inline on desktop
+// • Typography: Adjust sizes for different screen sizes
+
+// TODO: Test and refine spacing at different screen sizes
+// Hint: Components should feel appropriate at all breakpoints
+
+// -----------------------------------------------------------------------------
+// ACCESSIBILITY & POLISH
+// -----------------------------------------------------------------------------
+// Final touches for professional quality
+
+// TODO: Ensure all interactive elements have proper focus styles
+// Hint: Use your focus mixin consistently
+
+// TODO: Add subtle transitions and hover effects
+// Hint: Smooth transitions improve user experience
+
+// TODO: Review color contrast
+// Hint: Ensure text is readable on all backgrounds
+
+// -----------------------------------------------------------------------------
+// FINAL CHECKLIST
+// -----------------------------------------------------------------------------
+// Before you finish, ensure:
+// ✅ All components follow BEM naming methodology
+// ✅ Design system uses consistent colors, typography, and spacing
+// ✅ Forms are accessible (proper labels, focus states, error handling)
+// ✅ Layout is responsive and works on mobile, tablet, desktop
+// ✅ Code is organized and well-commented
+// ✅ CSS compiles without errors
+// ✅ Visual design feels professional and cohesive
+
+// =============================================================================
+// YOUR CODE STARTS HERE
+// =============================================================================
