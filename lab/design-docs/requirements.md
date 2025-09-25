@@ -31,7 +31,7 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Accessibility**: Proper labeling, focus states
 
 **🖼️ Visual Reference:**
-![Header Screenshot](../assets/sass_comprehensive_header.png)
+![Header Screenshot](../../ssets/sass_comprehensive_header.png)
 
 ---
 
@@ -50,8 +50,8 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Actions**: Primary, secondary, tertiary button styles
 
 **🖼️ Visual Reference:**
-![Form Screenshot](../assets/sass_comprehensive_main_documentation_wide.png)
-![Form Screenshot Narrow](../assets/sass_comprehensive_main_documentation_narrow.png)
+![Form Screenshot](../../ssets/sass_comprehensive_main_documentation_wide.png)
+![Form Screenshot Narrow](../../ssets/sass_comprehensive_main_documentation_narrow.png)
 
 ---
 
@@ -63,7 +63,7 @@ Transform the unstyled HTML into a polished, responsive form system using SCSS a
 - **Content**: Compact filter form with dropdowns and checkboxes
 
 **🖼️ Visual Reference:**
-![Form Screenshot](../assets/sass_comprehensive_filter_components.png)
+![Form Screenshot](../../ssets/sass_comprehensive_filter_components.png)
 
 ---
 
@@ -192,7 +192,7 @@ Use consistent spacing:
 ## 🖼️ Visual Reference
 
 ### Final Desktop Example
-![Final Desktop Example](../assets/sass_comprehensive_full.png)
+![Final Desktop Example](../../ssets/sass_comprehensive_full.png)
 
 ---
 
