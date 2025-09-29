@@ -11,27 +11,34 @@ Welcome to your SCSS lab workspace! You'll transform the unstyled HTML form comp
 
 ## 🚀 Quick Start
 
-1. **Install dependencies**:
+1. **Install dependencies** (from the root directory):
    ```bash
+   # Make sure you're in the project root directory
+   cd ..  # if you're currently in the lab/ folder
    npm install
    ```
 
-2. **Start the build process**:
+2. **Start the build process** (from the root directory):
    ```bash
    npm run watch
    ```
    *Keep this running! It auto-compiles your SCSS as you save files.*
 
-3. **Open the HTML file**:
+3. **Navigate back to the lab directory**:
+   ```bash
+   cd lab/
+   ```
+
+4. **Open the HTML file**:
    Open `index.html` in your browser to see the unstyled version
 
-4. **Review the requirements**:
+5. **Review the requirements**:
    Check `design-docs/requirements.md` for detailed component specifications
 
-5. **Start coding**:
+6. **Start coding**:
    Edit `scss/main.scss` following the guided comments
 
-6. **Link your compiled CSS**:
+7. **Link your compiled CSS**:
    After your first compilation, uncomment the CSS link in `index.html`:
    ```html
    <link rel="stylesheet" href="css/styles.css">
@@ -42,15 +49,19 @@ Welcome to your SCSS lab workspace! You'll transform the unstyled HTML form comp
 ## 📁 Project Structure
 
 ```
-design-system-forms/
-├── index.html              # Your HTML (already complete)
-├── scss/
-│   └── main.scss           # Your SCSS workspace (guided comments)
-├── css/
-│   └── styles.css          # Auto-generated (don't edit)
-├── design-docs/
-│   └── requirements.md     # Detailed specs and visual goals
-└── package.json            # Build configuration
+w2_css_sass_comprehensive/          # Project root
+├── package.json                    # Build configuration (now at root)
+├── .gitignore                      # Git ignore rules (now at root)
+└── lab/                            # Your workspace
+    ├── index.html                  # Your HTML (already complete)
+    ├── scss/
+    │   └── main.scss              # Your SCSS workspace (guided comments)
+    ├── css/
+    │   └── styles.css             # Auto-generated (don't edit)
+    ├── design-docs/
+    │   └── requirements.md        # Detailed specs and visual goals
+    └── tests/
+        └── progress.js            # Progress tracking script
 ```
 
 ---
@@ -141,6 +152,8 @@ This project is using the **BEM** (Block, Element, Modifier) approach to organiz
 
 ## 🛠️ Available Commands
 
+**Note:** All npm commands must be run from the project root directory (one level up from the lab/ folder).
+
 - `npm run watch` - Auto-compile SCSS as you work (recommended)
 - `npm run build` - Compile once and stop
 - `npm run test-progress` - Check your styling progress with automated tests
@@ -151,7 +164,7 @@ This project is using the **BEM** (Block, Element, Modifier) approach to organiz
 ## 🆘 Getting Unstuck
 
 **SCSS won't compile?**
-- Make sure `npm run watch` is running
+- Make sure you're running `npm run watch` from the project root directory (not from lab/)
 - Check for syntax errors (missing semicolons, unclosed brackets)
 - Restart the watch command if needed
 
@@ -168,7 +181,7 @@ This project is using the **BEM** (Block, Element, Modifier) approach to organiz
 - Use it to understand patterns, not to copy code directly
 
 **Want to check your progress?**
-- Run `npm run test-progress` to see which sections are complete
+- Run `npm run test-progress` from the project root to see which sections are complete
 - Tests check for custom styling presence, not specific design choices
 - Great way to track your progress and celebrate wins!
 

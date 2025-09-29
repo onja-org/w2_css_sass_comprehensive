@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Design System Documentation Platform - Form Components Lab",
   "scripts": {
-    "build": "sass scss/main.scss css/styles.css --no-source-map",
-    "watch": "sass scss/main.scss css/styles.css --watch --no-source-map",
+    "build": "sass lab/scss/main.scss lab/css/styles.css --no-source-map",
+    "watch": "sass lab/scss/main.scss lab/css/styles.css --watch --no-source-map",
     "dev": "npm run watch",
-    "test-progress": "node tests/progress.js"
+    "test-progress": "node lab/tests/progress.js"
   },
   "keywords": [
     "scss",

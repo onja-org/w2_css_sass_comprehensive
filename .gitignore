@@ -137,3 +137,7 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Generated CSS files (compiled from SCSS)
+lab/css/styles.css
+lab/css/styles.css.map

@@ -75,7 +75,9 @@ Students will practice:
 
 ```
 w2_css_sass_comprehensive/
-├── README.md                           # This overview
+├── .gitignore                         # Git ignore rules
+├── package.json                       # Build configuration and scripts
+├── README.md                          # This overview
 ├── assets/                            # Visual references and screenshots
 │   ├── sass_comprehensive_filter_components.png
 │   ├── sass_comprehensive_full.png
@@ -85,8 +87,9 @@ w2_css_sass_comprehensive/
 └── lab/                               # Main lab workspace
     ├── index.html                     # Student workspace (unstyled HTML)
     ├── index-complete.html           # Complete reference implementation
-    ├── package.json                  # Build configuration and scripts
     ├── README.md                     # Detailed lab instructions
+    ├── css/                          # Generated CSS files (auto-created)
+    │   └── styles.css                # Compiled SCSS output
     ├── design-docs/
     │   └── requirements.md           # Comprehensive design specifications
     ├── scss/
@@ -102,16 +105,21 @@ w2_css_sass_comprehensive/
 
 ## 🚀 Getting Started
 
-1. **Navigate to the lab directory:**
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Navigate to the lab directory:**
    ```bash
    cd lab/
    ```
 
-2. **Follow the detailed instructions** in the `lab/README.md` file
+3. **Follow the detailed instructions** in the `lab/README.md` file
 
-3. **Review the design requirements** in `lab/design-docs/requirements.md`
+4. **Review the design requirements** in `lab/design-docs/requirements.md`
 
-4. **Reference the visual assets** in the `assets/` directory
+5. **Reference the visual assets** in the `assets/` directory
 
 ---
 
